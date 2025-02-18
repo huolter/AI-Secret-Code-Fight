@@ -4,3 +4,5 @@ env/
 .venv/
 ENV/
 .env
+.gitignore
+.DS_Store
