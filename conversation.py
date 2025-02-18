@@ -77,7 +77,7 @@ def get_reponse_alpha(conversation_history):
     messages = prepare_messages_for_alpha(conversation_history)
 
     message = anthropic_client.messages.create(
-        model="claude-3-5-sonnet-20241022",
+        model="claude-3-opus-latest",
         max_tokens=4000,
         system=alpha_system,
         messages=messages
@@ -105,7 +105,7 @@ def get_response_beta(conversation_history):
     messages.extend(prepare_messages_for_beta(conversation_history))
 
     completion = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=messages,
         max_tokens=4000
     )
