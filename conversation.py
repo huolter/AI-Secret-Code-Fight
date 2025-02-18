@@ -105,7 +105,7 @@ def get_response_beta(conversation_history):
     messages.extend(prepare_messages_for_beta(conversation_history))
 
     completion = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=messages,
         max_tokens=4000
     )
